@@ -11,7 +11,7 @@ RUN apk add --no-cache \
         bash \
         curl \
         wget \
-    && export BUILD_GITHUB_TAG=${CHATGPT_ON_WECHAT_VER:-`curl -sL "https://api.github.com/repos/zhayujie/chatgpt-on-wechat/releases/latest" | \
+    && export BUILD_GITHUB_TAG=${CHATGPT_ON_WECHAT_VER:-`curl -sL "https://api.github.com/repos/LittleTrue/chatgpt-on-wechat/releases/latest" | \
         grep '"tag_name":' | \
         sed -E 's/.*"([^"]+)".*/\1/'`} \
     && wget -t 3 -T 30 -nv -O chatgpt-on-wechat-${BUILD_GITHUB_TAG}.tar.gz \
@@ -19,12 +19,15 @@ RUN apk add --no-cache \
     && tar -xzf chatgpt-on-wechat-${BUILD_GITHUB_TAG}.tar.gz \
     && mv chatgpt-on-wechat-${BUILD_GITHUB_TAG} ${BUILD_PREFIX} \
     && rm chatgpt-on-wechat-${BUILD_GITHUB_TAG}.tar.gz \
-    && cd ${BUILD_PREFIX} \
-    && cp config-template.json ${BUILD_PREFIX}/config.json \
-    && /usr/local/bin/python -m pip install --no-cache --upgrade pip \
-    && pip install --no-cache -r requirements.txt --extra-index-url https://alpine-wheels.github.io/index\
-    && pip install --no-cache -r requirements-optional.txt --extra-index-url https://alpine-wheels.github.io/index\
-    && apk del curl wget
+    && cd ${BUILD_PREFIX}
+
+RUN /usr/local/bin/python -m pip install --no-cache --upgrade pip
+
+RUN cd ${BUILD_PREFIX} && pip install --no-cache -r requirements.txt --extra-index-url https://alpine-wheels.github.io/index
+
+RUN cd ${BUILD_PREFIX} && pip install --no-cache -r requirements-optional.txt --extra-index-url https://alpine-wheels.github.io/index
+
+RUN apk del curl wget
 
 WORKDIR ${BUILD_PREFIX}
 
