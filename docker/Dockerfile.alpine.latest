@@ -7,14 +7,15 @@ ARG CHATGPT_ON_WECHAT_VER
 
 ENV BUILD_PREFIX=/app
 
-ADD . ${BUILD_PREFIX}
-
 RUN apk add --no-cache\
     bash \
     ffmpeg \
     espeak \
     curl \
     wget
+
+ADD . ${BUILD_PREFIX}
+
 
 RUN /usr/local/bin/python -m pip install --no-cache --upgrade pip
 
