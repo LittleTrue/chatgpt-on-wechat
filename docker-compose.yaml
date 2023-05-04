@@ -8,7 +8,7 @@ services:
     container_name: sample-chatgpt-on-wechat
     environment:
       OPEN_AI_API_KEY: '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'
-      OPEN_AI_PROXY: '120.76.243.59:7890'
+      OPEN_AI_PROXY: 'http://120.76.243.59:7890'
       SINGLE_CHAT_PREFIX: '["小真同学", "@小真同学"]'
       SINGLE_CHAT_REPLY_PREFIX: '"[小真同学] "'
       GROUP_CHAT_PREFIX: '["@小真同学"]'
