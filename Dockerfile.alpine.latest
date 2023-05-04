@@ -24,8 +24,6 @@ RUN cd ${BUILD_PREFIX} && pip install --no-cache -r requirements.txt --extra-ind
 
 RUN cd ${BUILD_PREFIX} && pip install --no-cache -r requirements-optional.txt --extra-index-url https://alpine-wheels.github.io/index
 
-RUN apk del curl wget
-
 WORKDIR ${BUILD_PREFIX}
 
 ADD docker/entrypoint.sh /entrypoint.sh

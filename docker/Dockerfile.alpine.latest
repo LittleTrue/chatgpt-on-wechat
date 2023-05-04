@@ -12,6 +12,7 @@ RUN apk add --no-cache\
     ffmpeg \
     espeak \
     curl \
+    gcc \
     wget
 
 ADD . ${BUILD_PREFIX}
@@ -22,8 +23,6 @@ RUN /usr/local/bin/python -m pip install --no-cache --upgrade pip
 RUN cd ${BUILD_PREFIX} && pip install --no-cache -r requirements.txt --extra-index-url https://alpine-wheels.github.io/index
 
 RUN cd ${BUILD_PREFIX} && pip install --no-cache -r requirements-optional.txt --extra-index-url https://alpine-wheels.github.io/index
-
-RUN apk del curl wget
 
 WORKDIR ${BUILD_PREFIX}
 
