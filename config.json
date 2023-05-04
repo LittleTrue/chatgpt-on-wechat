@@ -1,5 +1,5 @@
 {
-  "open_ai_api_key": "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",
+  "open_ai_api_key": "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",
   "model": "gpt-3.5-turbo",
   "proxy": "http://120.76.243.59:7890",
   "single_chat_prefix": [
