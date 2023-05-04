@@ -7,11 +7,11 @@ tiktoken>=0.3.2 # openai calculate token
 # pyttsx3>=2.90 # pytsx text to speech
 # baidu_aip>=4.16.10 # baidu voice
 # azure-cognitiveservices-speech # azure voice
-numpy<=1.24.2
+# numpy<=1.24.2
 # langid # language detect
 
 #install plugin
-dulwich
+# dulwich
 
 # wechaty
 wechaty>=0.10.7
