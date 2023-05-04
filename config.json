@@ -1,7 +1,7 @@
 {
   "open_ai_api_key": "",
   "model": "gpt-3.5-turbo",
-  "proxy": "http://120.76.243.59:7890",
+  "proxy": "http://127.0.0.1:7890",
   "single_chat_prefix": [
     "小真同学"
   ],
