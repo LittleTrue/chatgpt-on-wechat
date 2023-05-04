@@ -3,7 +3,7 @@ services:
   chatgpt-on-wechat:
     build:
       context: ./
-      dockerfile: Dockerfile.alpine
+      dockerfile: Dockerfile.alpine.latest
     image: zhayujie/chatgpt-on-wechat
     container_name: sample-chatgpt-on-wechat
     environment:
