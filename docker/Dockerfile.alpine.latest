@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.8-alpine
 
 LABEL maintainer="foo@bar.com"
 ARG TZ='Asia/Shanghai'
@@ -9,8 +9,12 @@ ENV BUILD_PREFIX=/app
 
 ADD . ${BUILD_PREFIX}
 
-RUN apk add --no-cache bash ffmpeg espeak \
-    && cd ${BUILD_PREFIX}
+RUN apk add --no-cache\
+    bash \
+    ffmpeg \
+    espeak \
+    curl \
+    wget
 
 RUN /usr/local/bin/python -m pip install --no-cache --upgrade pip
 
