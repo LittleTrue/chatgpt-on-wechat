@@ -12,6 +12,7 @@ RUN apk add --no-cache\
     ffmpeg \
     espeak \
     curl \
+    gcc \
     wget
 
 ADD . ${BUILD_PREFIX}
