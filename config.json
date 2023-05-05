@@ -18,8 +18,10 @@
   ],
   "image_create_prefix": [
     "画",
-    "看",
-    "找"
+    "帮忙画",
+    "找",
+    "帮忙生成",
+    "生成"
   ],
   "speech_recognition": false,
   "group_speech_recognition": false,
