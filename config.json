@@ -7,14 +7,14 @@
   ],
   "single_chat_reply_prefix": "[小真同学]",
   "group_chat_prefix": [
+    "小真同学",
     "@小真同学"
   ],
   "group_name_white_list": [
-    "ChatGPT测试群",
-    "ChatGPT测试群2"
+    "chat居pt"
   ],
   "group_chat_in_one_session": [
-    "ChatGPT测试群"
+    "chat居pt"
   ],
   "image_create_prefix": [
     "画",
