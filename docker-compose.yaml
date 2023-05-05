@@ -14,7 +14,7 @@ services:
       OPEN_AI_API_KEY: ''
       # OPEN_AI_PROXY: 'http://host.docker.internal:7890'
       OPEN_AI_PROXY: 'http://127.0.0.1:7890'
-      SINGLE_CHAT_PREFIX: ''
+      SINGLE_CHAT_PREFIX: '[""]'
       SINGLE_CHAT_REPLY_PREFIX: '"[小真同学] "'
       GROUP_CHAT_PREFIX: '["@小真同学","小真同学"]'
       GROUP_NAME_WHITE_LIST: '["chat居pt"]'
