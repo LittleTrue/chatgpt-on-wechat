@@ -5,13 +5,15 @@ services:
       context: ./
       dockerfile: Dockerfile.alpine.latest
     image: zhayujie/chatgpt-on-wechat
-    container_name: sample-chatgpt-on-wechat
+    container_name: chatgpt_con
     # host.docker.internal无效的情况下使用host方法走代理
     network_mode: host
     # extra_hosts:
     #   - 'host.docker.internal:host-gateway'
     environment:
-      OPEN_AI_API_KEY: ''
+      # OPEN_AI_API_KEY: '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'
+      OPEN_AI_API_KEY: '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'
+      MODEL: 'gpt-3.5-turbo'
       # OPEN_AI_PROXY: 'http://host.docker.internal:7890'
       OPEN_AI_PROXY: 'http://127.0.0.1:7890'
       SINGLE_CHAT_PREFIX: '[""]'
