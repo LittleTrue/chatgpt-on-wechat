@@ -1,15 +1,10 @@
 version: '2.0'
 services:
   chatgpt-on-wechat:
-    build:
-      context: ./
-      dockerfile: Dockerfile.alpine.latest
     image: zhayujie/chatgpt-on-wechat
     container_name: chatgpt_con
-    # host.docker.internal无效的情况下使用host方法走代理
-    network_mode: host
-    # extra_hosts:
-    #   - 'host.docker.internal:host-gateway'
+    security_opt:
+      - seccomp:unconfined
     environment:
       # OPEN_AI_API_KEY: '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'
       OPEN_AI_API_KEY: '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'
