@@ -6,8 +6,8 @@ services:
     security_opt:
       - seccomp:unconfined
     environment:
-      # OPEN_AI_API_KEY: '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'
-      OPEN_AI_API_KEY: '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'
+      # OPEN_AI_API_KEY: ''
+      OPEN_AI_API_KEY: ''
       MODEL: 'gpt-3.5-turbo'
       # OPEN_AI_PROXY: 'http://host.docker.internal:7890'
       OPEN_AI_PROXY: 'http://127.0.0.1:7890'
